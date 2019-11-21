@@ -9,21 +9,26 @@ import android.widget.ImageButton;
 
 public class CustomerActivity extends AppCompatActivity
 {
+    ImageButton customer_cancel;
+    Button customer_inquiry;
+    Button customer_check;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer);
 
-        ImageButton customer_cancel = (ImageButton) findViewById(R.id.btn_customer_cancel);
+        customer_cancel = (ImageButton) findViewById(R.id.btn_customer_cancel);
+        customer_inquiry = (Button) findViewById(R.id.btn_customer_inquiry);
+        customer_check = (Button) findViewById(R.id.btn_customer_check);
+        
         customer_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
-
-        Button customer_inquiry = (Button) findViewById(R.id.btn_customer_inquiry);
         customer_inquiry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,8 +36,6 @@ public class CustomerActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
-
-        Button customer_check = (Button) findViewById(R.id.btn_customer_check);
         customer_check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,6 +44,4 @@ public class CustomerActivity extends AppCompatActivity
             }
         });
     }
-
-
 }
