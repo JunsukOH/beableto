@@ -54,8 +54,8 @@ public class ListAdapter extends BaseAdapter
             convertView = inflater.inflate(R.layout.listview_item, parent, false);
         }
 
-        TextView oTextTitle = (TextView) convertView.findViewById(R.id.textTitle);
-        TextView oTextDate = (TextView) convertView.findViewById(R.id.textDate);
+        TextView oTextTitle = (TextView) convertView.findViewById(R.id.text_customer_check_title);
+        TextView oTextDate = (TextView) convertView.findViewById(R.id.text_customer_check_date);
 
         oTextTitle.setText(m_oData.get(position).strTitle);
         oTextDate.setText(m_oData.get(position).strDate);
