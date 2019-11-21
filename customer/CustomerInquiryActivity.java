@@ -25,16 +25,16 @@ public class CustomerInquiryActivity extends AppCompatActivity
         setContentView(R.layout.activity_customer_inquiry);
 
         customer_inquiry_cancel = (ImageButton) findViewById(R.id.btn_customer_inquiry_cancel);
+        customer_inquiry_next = (Button) findViewById(R.id.btn_customer_inquiry_next);
+        customer_inquiry_title = (EditText) findViewById(R.id.text_customer_inquiry_title);
+        customer_inquiry_content = (EditText) findViewById(R.id.text_customer_inquiry_content);
+
         customer_inquiry_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
-
-        customer_inquiry_next = (Button) findViewById(R.id.btn_customer_inquiry_next);
-        customer_inquiry_title = (EditText) findViewById(R.id.text_customer_inquiry_title);
-        customer_inquiry_content = (EditText) findViewById(R.id.text_customer_inquiry_content);
         customer_inquiry_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,8 +42,7 @@ public class CustomerInquiryActivity extends AppCompatActivity
                 {
                     if(customer_inquiry_content.getText().toString().length() > 0)
                     {
-                        Intent intent = new Intent(CustomerInquiryActivity.this, CustomerActivity.class);
-                        startActivity(intent);
+                        finish();
                     }
                     else
                     {
