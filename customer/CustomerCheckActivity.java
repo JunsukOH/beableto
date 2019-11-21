@@ -8,10 +8,14 @@ import android.widget.ListView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 
 public class CustomerCheckActivity extends AppCompatActivity
 {
+    ImageButton customer_check_cancel;
+
     private ListView m_oListView = null;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -19,7 +23,8 @@ public class CustomerCheckActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_check);
 
-        ImageButton customer_check_cancel = (ImageButton) findViewById(R.id.btn_customer_check_cancel);
+        customer_check_cancel = (ImageButton) findViewById(R.id.btn_customer_check_cancel);
+
         customer_check_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,6 +48,7 @@ public class CustomerCheckActivity extends AppCompatActivity
             oItem.strDate = getTime;
             oData.add(oItem);
         }
+        Collections.reverse(oData);
 
         // ListView 생성
         m_oListView = (ListView)findViewById(R.id.listView);
