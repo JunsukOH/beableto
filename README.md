@@ -30,3 +30,8 @@
 
 : Bus Register VGI
 1. UI/UX 구현
+
+[OpenAPI]
+- 공공데이터 실시간 버스위치정보조회 API
+- API 승인 완료
+- 지도 위 표시 구현 중
