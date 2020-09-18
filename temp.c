@@ -1,10 +1,10 @@
-#include <iostream>
+using System.IO;
+using System;
 
-using namespace std;
-
-int main()
+class Program
 {
-   cout << "Hello World" << endl; 
-   
-   return 0;
+    static void Main()
+    {
+        Console.WriteLine("Hello, World!");
+    }
 }
