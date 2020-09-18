@@ -1,5 +1,10 @@
-with Ada.Text_IO; use Ada.Text_IO;
-procedure Hello is
-begin
-  Put_Line("Hello world");
-end Hello;
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   cout << "Hello World" << endl; 
+   
+   return 0;
+}
